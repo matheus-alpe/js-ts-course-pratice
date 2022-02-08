@@ -25,7 +25,7 @@ let promises = [
 
 Promise.all(promises)
     .then(log)
-    .catch(error => log('ERROR:', error));
+    .catch((error) => log('ERROR:', error));
 
 //Return the fastest result
 promises = [
@@ -33,9 +33,10 @@ promises = [
     wait(random(1000, 5000), '2'),
     wait(random(1000, 5000), '3'),
 ];
+
 Promise.race(promises)
-    .then(response => log('Fast result is:', response))
-    .catch(error => log('ERROR:', error));
+    .then((response) => log('Fast result is:', response))
+    .catch((error) => log('ERROR:', error));
 
 function downloadPage() {
     const inCache = true;
@@ -50,4 +51,4 @@ function downloadPage() {
 
 downloadPage()
     .then(log)
-    .catch(error => log('ERROR:', error));
+    .catch((error) => log('ERROR:', error));
