@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev:webpack": "webpack -w",
+        "clean": "rm -rf node_modules"
     },
     "keywords": [],
     "author": "",
@@ -14,9 +15,11 @@
         "@babel/core": "^7.17.2",
         "@babel/preset-env": "^7.16.11",
         "babel-loader": "^8.2.3",
-        "core-js": "^2.6.10",
-        "regenerator-runtime": "^0.13.9",
         "webpack": "^5.68.0",
         "webpack-cli": "^4.9.2"
+    },
+    "dependencies": {
+        "core-js": "^3.21.1",
+        "regenerator-runtime": "^0.13.9"
     }
 }
